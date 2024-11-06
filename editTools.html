@@ -1,0 +1,146 @@
+<div id="editWrapper">
+    <div id="floatForm">
+    	<input id='toggleShowOption' name="toggleOption" type="button" value="Hide Edit Option" />
+        
+        <div id="editOption">
+        	<br/>
+        	<div id="actionWrapper">
+                Select levels:<br/>
+                <select id="levellist" name="levellist">
+                </select><br/>
+                <input id="prevLevel" name="prevLevel" class="button" type="button" value="Prev Level">
+                <input id="nextLevel" name="nextLevel" class="button" type="button" value="Next Level">
+                <br/><br/>
+                <input id="addNewLevel" name="addNewLevel" type="button" value="Add New Level">
+                <input id="moveLevelUp" name="moveLevelUp" type="button" value="Move Level Up">
+                <input id="moveLevelDown" name="moveLevelDown" type="button" value="Move Level Down">
+                <input id="removeLevel" name="removeLevel" type="button" value="Remove Level">
+            	<br/><br/>
+                Edit level:
+                <input id='editLevel' name="editLevel" type="button" value="Edit Level" />
+                <input id='editPath' name="editPath" type="button" value="Edit Path" />
+            	<input id='editWaves' name="editWaves" type="button" value="Edit Waves" />
+                <input id='editTower' name="editTower" type="button" value="Edit Towers" />
+                <br/><br/>
+                Test play, generate and replace array:
+                <input id='testPlay' name="testPlay" type="button" value="Test Play" />
+                <input id='generateArray' name="generateArray" type="button" value="Generate Array" />
+                <textarea id="outputArray" name="outputArray" cols="" rows="10"></textarea>
+        	</div>
+            
+            <div id="playWrapper">
+            	<div id="gameStatus"></div>
+            	<input id='stopTestPlay' name="stopTestPlay" type="button" value="Stop Play" />
+            </div>
+            
+            <div id="editLevelWrapper" style="display:none;">
+            	Edit detail:<br/>
+            	<div class="formRow">
+                    <label class="button">Map Image:</label>
+                    <input id="levelImage" name="levelImage" class="button" type="text" value="">
+                </div>
+            	<div class="formRow">
+                    <label class="button">Resource:</label>
+                    <input id="levelResource" name="levelResource" class="button" type="text" value="50">
+                </div>
+                <div class="formRow">
+                    <label class="button">Life:</label>
+                    <input id="levelLife" name="levelLife" class="button" type="text" value="10">
+                </div>
+                <br/>
+                <input id="updateLevel" name="updateLevel" type="button" value="Update Level">
+                <input id='doneLevel' name="doneLevel" type="button" value="Done" />
+            </div>
+            
+            <div id="editPathWrapper" style="display:none;">
+            	<div id="editPathSelectWrapper">
+                    Select path to edit:<br/>
+                    <div id="selectPath" class="here">
+                    	<div id="selectPathContent" class="inner">
+                            <select id="pathlist" name="pathlist"></select><br/>
+                            <input id="prevPath" name="prevPath" class="button" type="button" value="Prev Path">
+                            <input id="nextPath" name="nextPath" class="button" type="button" value="Next Path">
+                        </div>
+                    </div>
+                    <input id="addNewPath" name="addNewPath" type="button" value="Add New Path">
+                    <input id="removePath" name="removePath" type="button" value="Remove Path">
+                </div>
+                <br/>
+                <div id="editPathWayWrapper" style="display:none;">
+                	<input id='editWayStart' name="editWayStart" type="button" value="Connecting the path" />
+                    <input id='editWayClear' name="editWayClear" type="button" value="Clear path" />
+                </div>
+                <br/>
+                <input id='donePath' name="donePath" type="button" value="Done" />
+            </div>
+            
+            <div id="editWayWrapper" style="display:none;">
+            	First click on stage to start new path, click the green button on stage to continue the path:<br/><br/>
+            	<input id='doneWayPath' name="doneWayPath" type="button" value="Done edit Path" />
+            </div>
+            
+            <div id="editWavesWrapper" style="display:none;">
+            	Select path to edti waves:
+                <div id="selectWavePath"></div>
+                <br/>
+                
+                Select wave to edit:
+                <select name="wavelist" id="wavelist" size="10">
+                </select>
+                <br/><br/>
+                <input id="addNewWave" name="addNewWave" type="button" value="Add New Wave">
+                <input id="removeWave" name="removeWave" type="button" value="Remove Selected Wave">
+                <div class="formRow">
+                	<input id="moveDown" name="moveDown" type="button" class="button" value="Move Down">
+                    <input id="moveUp" name="moveUp" type="button" class="button" value="Move Up">
+                </div>
+                
+                <div id="editWavesUpdateWrapper" class="divider">
+                	<div class="formRowLong extraHeight">
+                        <label >Monster index list (seperate by comma):</label>
+                        <input id="waveValue" name="waveValue" type="text" value="0,0,0,0,0,1">
+                    </div>
+                    <div class="formRow">
+                        <label class="button">Delay:</label>
+                        <input id="waveDelay" name="waveDelay" class="button" type="text" value="1">
+                    </div>
+                    <div class="formRow">
+                        <label class="button">Spacing:</label>
+                        <input id="waveSpace" name="waveSpace" class="button" type="text" value="1">
+                    </div>
+                    <div class="formRow">
+                        <label class="button">Wave speed:</label>
+                        <input id="waveSpeed" name="waveSpeed" class="button" type="text" value="1">
+                    </div>
+                    <input id="updateWave" name="updateWave" type="button" value="Update Selected Wave">
+                </div>
+                <input id='doneWave' name="doneWave" type="button" value="Done" />
+            </div>
+            
+            <div id="editTowerWrapper" style="display:none;">
+            	Click on the stage to add/remove tower build area:<br/><br/>
+            	Select towers to edit:
+            	<select name="towerlist" id="towerlist" required="required" size="5">
+                </select>
+                <br/><br/>
+                Select upgrade options to edit:
+            	<select name="towerupgradelist" id="towerupgradelist" required="required" size="5">
+                </select>
+                <br/><br/>
+                <div id="editTowerUpdateWrapper" style="display:none;">
+                    <div class="formRow">
+                        <label class="button">Build option:</label>
+                        <select id="towerEnable" name="towerEnable" class="button">
+                            <option value="0">DISABLE</option>
+                            <option value="1">AVAILABLE</option>
+                        </select>
+                    </div>
+                    <input id="updateTower" name="updateTower" type="button" value="Update Selected Tower">
+                </div>
+                <br/>
+                <input id='doneTower' name="doneTower" type="button" value="Done" />
+            </div>
+            
+        </div>
+    </div>
+</div>
